@@ -24,6 +24,8 @@ import {
   UnorderedList,
 } from "@chakra-ui/react";
 
+import style from "../styles/Home.module.css";
+
 import useTranslation from "next-translate/useTranslation";
 
 import MainVisual from "../components/mainVisual.js";
@@ -37,7 +39,13 @@ import pic01 from "../public/pic01.png";
 import artsticker from "../public/artsticker.png";
 
 export default function Home() {
-  const { t } = useTranslation("common");
+  // styleを設定
+  const EngStyle = {
+    fontSize: ["1.5rem", "1.75rem", "2rem", "2rem"],
+    lineHeight: ["2.7rem", "3.15rem", "3.6rem", "3.6rem"],
+    letterSpacing: ["0.06rem", "0.07rem", "0.08rem", "0.08rem"],
+  };
+
   return (
     <Box bg="bg" color="primary" fontSize="md" lineHeight={10} width="100%">
       <Head>
@@ -65,8 +73,9 @@ export default function Home() {
           textAlign="right"
           marginTop="10vh"
           paddingTop="2.5vh"
-          letterSpacing={["0.1rem", "0.1rem", "0.2rem", "0.2rem"]}
-          fontSize={["2xl", "2xl", "3xl", "3xl"]}
+          fontSize={["1.5rem", "1.75rem", "2rem", "2rem"]}
+          lineHeight={["2.7rem", "3.15rem", "3.6rem", "3.6rem"]}
+          letterSpacing={["0.06rem", "0.07rem", "0.08rem", "0.08rem"]}
           fontFamily="Josefin Sans"
         >
           <Text>- Blockchain As A New Medium For Art -</Text>
@@ -77,7 +86,13 @@ export default function Home() {
         {/* Concept Section */}
         <Box>
           <SectionTitle>CONCEPT</SectionTitle>
-          <Text as="p">
+          <Text
+            as="p"
+            fontSize={["1rem", "1rem", "1.25rem", "1.25rem"]}
+            lineHeight={["2rem", "2rem", "2.5rem", "2.5rem"]}
+            letterSpacing={["0.1rem", "0.1rem", "0.13rem", "0.13rem"]}
+            fontFamily="Zen Kaku Gothic New"
+          >
             NFTによってデジタルアートが広く流通するようになった今、Generative
             Artが再評価されたり、商業的な成功を収めた作家も数多く生まれました。しかし、いまだにNFTについての批評や評価を行える人材が少なく、その可能性についてまだ理解が進んでいない現状があります。そこで「Proof
             of
@@ -98,14 +113,18 @@ export default function Home() {
               {" ("}sun{")"}
             </Box>
           </Heading>
-          <Text as="p" fontSize="xl">
-            土日 : 10:00am - 07:00pm {"("}初日はOpening
-            Receptionのため10:00pmまで
-            {")"}
-          </Text>
-          <Text as="p" fontSize="xl">
-            平日 : 12:00pm - 09:00pm
-          </Text>
+          <Box
+            fontSize={["1.25rem", "1.25rem", "1.5rem", "1.5rem"]}
+            letterSpacing={["0.13rem", "0.13rem", "0.15rem", "0.15rem"]}
+            fontFamily="Zen Kaku Gothic New"
+          >
+            <Text as="p">
+              土日 : 10:00am - 07:00pm {"("}初日はOpening
+              Receptionのため10:00pmまで
+              {")"}
+            </Text>
+            <Text as="p">平日 : 12:00pm - 09:00pm</Text>
+          </Box>
           <Heading
             display="inline-block"
             fontSize="3xl"
@@ -132,9 +151,13 @@ export default function Home() {
             </Text>
           </Heading>
           <Flex spacing="0" direction={{ base: "column", sm: "row" }}>
-            <Text as="p" fontSize="xl">
-              {/* 東京都渋谷区猿楽町28-13 ROOB-1 B2F */}
-              {t("common:OutlineLocate")}
+            <Text
+              as="p"
+              fontSize={["1.2rem", "1.2rem", "1.4rem", "1.4rem"]}
+              letterSpacing={["0.12rem", "0.12rem", "0.14rem", "0.14rem"]}
+              fontFamily="Zen Kaku Gothic New"
+            >
+              東京都渋谷区猿楽町28-13 ROOB-1 B2F
             </Text>
             <Link href="https://goo.gl/maps/NHvVH9Cym72UPQiw9">
               <Text
@@ -157,7 +180,12 @@ export default function Home() {
               </Text>
             </Link>
           </Flex>
-          <Text as="p" fontSize="xl">
+          <Text
+            as="p"
+            fontSize={["1.2rem", "1.2rem", "1.4rem", "1.4rem"]}
+            letterSpacing={["0.12rem", "0.13rem", "0.14rem", "0.14rem"]}
+            fontFamily="Zen Kaku Gothic New"
+          >
             東急東横線「代官山」駅徒歩3分
           </Text>
           <HStack marginTop="2rem">
@@ -173,7 +201,13 @@ export default function Home() {
         {/* Ticket Section */}
         <Box>
           <SectionTitle>TICKET</SectionTitle>
-          <HStack justifyContent="center" spacing="2.5rem" fontSize="xl">
+          <HStack
+            justifyContent="center"
+            spacing="2.5rem"
+            fontSize={["1.25rem", "1.25rem", "1.5rem", "1.5rem"]}
+            letterSpacing={["0.13rem", "0.13rem", "0.15rem", "0.15rem"]}
+            fontFamily="Zen Kaku Gothic New"
+          >
             <Text as="p">一般 : ¥1,000</Text>
             <Text as="p">大学生 : ¥500</Text>
             <Text as="p">高校生以下 : 無料</Text>
@@ -213,7 +247,12 @@ export default function Home() {
         {/* Artist Section */}
         <Box>
           <SectionTitle>ARTISTS</SectionTitle>
-          <Heading fontSize="2xl" letterSpacing="0.075rem" lineHeight="2.5rem">
+          <Heading
+            fontSize={["1.25rem", "1.25rem", "1.5rem", "1.5rem"]}
+            lineHeight={["2.5rem", "2.5rem", "3rem", "3rem"]}
+            letterSpacing={["0.13rem", "0.13rem", "0.15rem", "0.15rem"]}
+            fontFamily="Josefin Sans"
+          >
             Akihiro Kato / ALTERNATIVE MACHINE / Ara / bouze / Deafbeef /
             EXCALIBUR / exonemo / Figure31 / Jack Butcher / Jan Robert Leegte /
             Kitasenju Design / Masaki Fujihata / NIINOMI / Pindar Van Arman /
@@ -223,7 +262,13 @@ export default function Home() {
         {/* 1st exhibition Section */}
         <Box>
           <SectionTitle>1st EXHIBITION of Proof Of X</SectionTitle>
-          <Text as="p">
+          <Text
+            as="p"
+            fontSize={["1rem", "1rem", "1.25rem", "1.25rem"]}
+            lineHeight={["2rem", "2rem", "2.5rem", "2.5rem"]}
+            letterSpacing={["0.1rem", "0.1rem", "0.13rem", "0.13rem"]}
+            fontFamily="Zen Kaku Gothic New"
+          >
             2022年の4月22日から5月1日かけて、東京の3331 Arts Chiyoda にて「Proof
             of X」の第1回目が行われました。「Proof of X NFT as New Media
             Art」と銘打ち、NFTを（投機目的の）画像データを売る仕組みとし
@@ -233,10 +278,22 @@ export default function Home() {
         {/* Team Section */}
         <Box>
           <SectionTitle>TEAM</SectionTitle>
-          <Text fontSize="xl" fontWeight="semibold">
+          <Text
+            fontWeight="semibold"
+            fontSize={["1rem", "1rem", "1.25rem", "1.25rem"]}
+            lineHeight={["2rem", "2rem", "2.5rem", "2.5rem"]}
+            letterSpacing={["0.1rem", "0.1rem", "0.13rem", "0.13rem"]}
+            fontFamily="Zen Kaku Gothic New"
+          >
             Proofs of X実行委員会
           </Text>
-          <Text>
+          <Text
+            as="p"
+            fontSize={["1rem", "1rem", "1.25rem", "1.25rem"]}
+            lineHeight={["2rem", "2rem", "2.5rem", "2.5rem"]}
+            letterSpacing={["0.1rem", "0.1rem", "0.13rem", "0.13rem"]}
+            fontFamily="Zen Kaku Gothic New"
+          >
             「Proof of X
             Vol.2」はNFTの領域で活動する批評家、メディア、アーティスト、技術者による共同運営により開催されます。現在のチームは以下の通りです。
           </Text>
@@ -245,6 +302,10 @@ export default function Home() {
             fontWeight="semibold"
             margin="0"
             marginTop="1.25rem"
+            fontSize={["1rem", "1rem", "1.25rem", "1.25rem"]}
+            lineHeight={["2rem", "2rem", "2.5rem", "2.5rem"]}
+            letterSpacing={["0.1rem", "0.1rem", "0.13rem", "0.13rem"]}
+            fontFamily="Josefin Sans"
           >
             <ListItem>
               <Link href="https://neort.io/popular" textDecoration="underline">

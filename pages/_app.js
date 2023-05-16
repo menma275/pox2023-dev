@@ -1,11 +1,11 @@
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme, CSSReset } from "@chakra-ui/react";
 
 function App({ Component, pageProps }) {
   return (
     <ChakraProvider
       theme={extendTheme({
         colors: {
-          bg: "#d8dcdd",
+          bg: "#d7dcdc",
           primary: "#000000",
           secondary: "#ffffff",
         },
@@ -15,6 +15,7 @@ function App({ Component, pageProps }) {
         },
       })}
     >
+      <CSSReset />
       <Component {...pageProps} />
     </ChakraProvider>
   );

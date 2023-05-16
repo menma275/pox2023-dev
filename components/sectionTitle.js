@@ -6,7 +6,8 @@ const SectionTitle = (props) => {
     <Box textAlign="center" marginTop="7.5rem" marginBottom="3rem">
       <Heading
         display="inline-block"
-        letterSpacing={5}
+        fontSize="1.75rem"
+        letterSpacing="0.07rem"
         paddingBottom={2}
         borderBottom="4px"
         {...props}
