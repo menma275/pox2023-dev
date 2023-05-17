@@ -20,7 +20,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 
-import Lang from "../components/lang";
+import LangButton from "./langButton";
 
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaTwitter } from "react-icons/fa";
@@ -57,7 +57,7 @@ export default function Menu() {
             MENU
           </Text>
         </Button>
-        <Lang marginTop="0.1rem" />
+        <LangButton marginTop="0.1rem" />
       </Flex>
       <Drawer
         isOpen={isOpen}

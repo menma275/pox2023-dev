@@ -26,8 +26,6 @@ import {
 
 import style from "../styles/Home.module.css";
 
-import useTranslation from "next-translate/useTranslation";
-
 import MainVisual from "../components/mainVisual.js";
 import SectionTitle from "../components/sectionTitle.js";
 import Footer from "../components/footer.js";
@@ -37,14 +35,12 @@ import logo from "../public/logo.png";
 import map from "../public/map.png";
 import pic01 from "../public/pic01.png";
 import artsticker from "../public/artsticker.png";
+import { useI18n } from "use-mini18n";
+import { useEffect } from "react";
+import LangButton from "../components/langButton";
 
 export default function Home() {
-  // styleを設定
-  const EngStyle = {
-    fontSize: ["1.5rem", "1.75rem", "2rem", "2rem"],
-    lineHeight: ["2.7rem", "3.15rem", "3.6rem", "3.6rem"],
-    letterSpacing: ["0.06rem", "0.07rem", "0.08rem", "0.08rem"],
-  };
+  const { t } = useI18n();
 
   return (
     <Box bg="bg" color="primary" fontSize="md" lineHeight={10} width="100%">
@@ -84,21 +80,20 @@ export default function Home() {
         </Box>
 
         {/* Concept Section */}
+        <Text></Text>
         <Box>
           <SectionTitle>CONCEPT</SectionTitle>
-          <Text
-            as="p"
+          <Box
             fontSize={["1rem", "1rem", "1.25rem", "1.25rem"]}
             lineHeight={["2rem", "2rem", "2.5rem", "2.5rem"]}
             letterSpacing={["0.1rem", "0.1rem", "0.13rem", "0.13rem"]}
             fontFamily="Zen Kaku Gothic New"
           >
-            NFTによってデジタルアートが広く流通するようになった今、Generative
-            Artが再評価されたり、商業的な成功を収めた作家も数多く生まれました。しかし、いまだにNFTについての批評や評価を行える人材が少なく、その可能性についてまだ理解が進んでいない現状があります。そこで「Proof
-            of
-            X」の2回目となる本展では、Blockchain及びNFTのメディウムとしての特性に光を当て、NFTの「Core」とも言えるSmart
-            Contractレイヤーを取り扱う作品を中心に、その諸相を紹介します。今日のCryptoカルチャーを形成するCoreとなっているSmartContractの可能性はアートの領域のみに留まるものではありません。それを基盤として進化するデジタル文化の諸相を本展で提示するとともに、この展示がより良き議論の機会となることを望みます。
-          </Text>
+            <Text>{t["concept1"]}</Text>
+            <Text>{t["concept2"]}</Text>
+            <Text>{t["concept3"]}</Text>
+            <Text>{t["concept4"]}</Text>
+          </Box>
         </Box>
         {/* Outline Section */}
         <Box>
@@ -118,12 +113,8 @@ export default function Home() {
             letterSpacing={["0.13rem", "0.13rem", "0.15rem", "0.15rem"]}
             fontFamily="Zen Kaku Gothic New"
           >
-            <Text as="p">
-              土日 : 10:00am - 07:00pm {"("}初日はOpening
-              Receptionのため10:00pmまで
-              {")"}
-            </Text>
-            <Text as="p">平日 : 12:00pm - 09:00pm</Text>
+            <Text as="p">{t["OutlineDateWeekend"]}</Text>
+            <Text as="p">{t["OutlineDateWeekday"]}</Text>
           </Box>
           <Heading
             display="inline-block"
@@ -157,7 +148,7 @@ export default function Home() {
               letterSpacing={["0.12rem", "0.12rem", "0.14rem", "0.14rem"]}
               fontFamily="Zen Kaku Gothic New"
             >
-              東京都渋谷区猿楽町28-13 ROOB-1 B2F
+              {t["OutlineLocate"]}
             </Text>
             <Link href="https://goo.gl/maps/NHvVH9Cym72UPQiw9">
               <Text
@@ -186,7 +177,7 @@ export default function Home() {
             letterSpacing={["0.12rem", "0.13rem", "0.14rem", "0.14rem"]}
             fontFamily="Zen Kaku Gothic New"
           >
-            東急東横線「代官山」駅徒歩3分
+            {t["OutlineWay"]}
           </Text>
           <HStack marginTop="2rem">
             <AspectRatio width="50%" aspectRatio={630 / 471}>
@@ -201,17 +192,19 @@ export default function Home() {
         {/* Ticket Section */}
         <Box>
           <SectionTitle>TICKET</SectionTitle>
-          <HStack
+          <Flex
+            direction={{ base: "column", sm: "row" }}
+            textAlign={{ base: "left", sm: "center" }}
             justifyContent="center"
             spacing="2.5rem"
             fontSize={["1.25rem", "1.25rem", "1.5rem", "1.5rem"]}
             letterSpacing={["0.13rem", "0.13rem", "0.15rem", "0.15rem"]}
             fontFamily="Zen Kaku Gothic New"
           >
-            <Text as="p">一般 : ¥1,000</Text>
-            <Text as="p">大学生 : ¥500</Text>
-            <Text as="p">高校生以下 : 無料</Text>
-          </HStack>
+            <Text as="p">{t["TicketAdult"]}</Text>
+            <Text as="p">{t["TicketCollege"]}</Text>
+            <Text as="p">{t["TicketHighschool"]}</Text>
+          </Flex>
           <Box width="fit-content" marginX="auto">
             <Link href="https://artsticker.app/events/6998" textAlign="center">
               <Text
@@ -231,7 +224,7 @@ export default function Home() {
                   borderRadius: "1rem",
                 }}
               >
-                チケットを購入する
+                {t["BuyTicket"]}
               </Text>
             </Link>
             <Box
@@ -269,10 +262,7 @@ export default function Home() {
             letterSpacing={["0.1rem", "0.1rem", "0.13rem", "0.13rem"]}
             fontFamily="Zen Kaku Gothic New"
           >
-            2022年の4月22日から5月1日かけて、東京の3331 Arts Chiyoda にて「Proof
-            of X」の第1回目が行われました。「Proof of X NFT as New Media
-            Art」と銘打ち、NFTを（投機目的の）画像データを売る仕組みとし
-            て利用するのではなく、NFTを固有の技術・メディウムとして捉え、洞察する中で制作された作品を紹介しました。画一的な目線に終始せず（ときには批判的に捉えながら）、NFTとは何であるのか、その表層の奥にある特性を見つめ、様々なアイディアを織り込んだ作品を提示しました。
+            {t["firststExhibit"]}
           </Text>
         </Box>
         {/* Team Section */}
@@ -285,7 +275,7 @@ export default function Home() {
             letterSpacing={["0.1rem", "0.1rem", "0.13rem", "0.13rem"]}
             fontFamily="Zen Kaku Gothic New"
           >
-            Proofs of X実行委員会
+            {t["Team"]}
           </Text>
           <Text
             as="p"
@@ -294,8 +284,7 @@ export default function Home() {
             letterSpacing={["0.1rem", "0.1rem", "0.13rem", "0.13rem"]}
             fontFamily="Zen Kaku Gothic New"
           >
-            「Proof of X
-            Vol.2」はNFTの領域で活動する批評家、メディア、アーティスト、技術者による共同運営により開催されます。現在のチームは以下の通りです。
+            {t["AboutTeam"]}
           </Text>
           <UnorderedList
             listStyleType="none"
