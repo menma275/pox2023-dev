@@ -1,13 +1,7 @@
 const i18n = {
   ja: {
-    concept1:
-      "　非中央集権型のP2Pシステムであるブロックチェーンは、透明性と高い信頼性を実現し、仲介者を不要とすることで、その登場以降社会への影響を広げ続けています。そして、ブロックチェーンにおいて一定の条件下で実行されるスマートコントラクトは、所有・販売・配布などの多様なプロセスをシステム化し、NFT作品の制作とマーケット形成を支えています。またそれは、アートの在り方の新たな展開をも生み出そうとしています。かつてアーティスト、ハッカーであるレア・マイヤース（Rhea Myers）はブロックチェーンをアートのメディウムとして活用できることを先駆けて提示し、《シンプル・ブロックチェーンアート・ダイアグラム（Sirmple Blockchain Art Diagram）》(2016)において、そのことを簡潔に表現していました。このダイアグラムではブロックチェーンのブロックを指し示して、「アートがここで生まれている（The art happens here）」と告げています。",
-    concept2:
-      "　本展は「NFTを固有の技術・メディウムとして捉える」ことを意図した2022年4月の展示、「Proof of X - NFT as New Media Art」の続編として位置付けられ、NFTの「Core」とも言えるブロックチェーン及びスマートコントラクトにフォーカスした国内外のアーティストの作品を紹介します。前回の「Proof of X」展から1年、NFTアートを取り巻く状況も大きく変化しました。いわゆる冬の時代と言われる暗号通貨の暴落を経験し、NFTアートに対する投機的な熱が次第に冷めていく中で、改めてNFTを利用するアートとは何か、NFTにできることは何かが問い直されているでしょう。それはつまり、様々な技術的・思想的コンテクストを持つブロックチェーンの可能性と、そこで展開されるスマートコントラクトによる「コードの実行」が持つ力（あるいはその危うさ）について再考することが必要とされているのです。",
-    concept3:
-      "　スマートコントラクトを活用することで、外部データやユーザーのアクションに連動して作品イメージや属性を変化させることのできる「Dynamic NFT」や「Programmable NFT」と呼ばれる作品が登場しました。それらの作品ではアーティストによって生み出される出力は一つにとどまらず、ブロックチェーンを起点としてアートが様々な関係を切り結ぶことを可能とします。透明性を持って実行されるスマートコントラクトの可能性は広汎であり、アーティストと観客・コレクター・キュレーターといったこれまで区別されてきた関係性を変化させ、そして最終的にはアート領域そのものの拡張、さらには人間が行ってきた創造行為の変容を促すでしょう。NFTは、単なるデジタルアセットからより複雑なデジタル生態系へと組み込まれることで、アートの領域を超えて新しい社会像を形成する可能性を秘めています。",
-    concept4:
-      "　本展が進化するデジタル文化の諸相を提示するとともに、より良き議論の機会となることを望みます。",
+    concept:
+      "NFTによってデジタルアートが広く流通するようになった今、Generative Artが再評価されたり、商業的な成功を収めた作家も数多く生まれました。しかし、いまだにNFTについての批評や評価を行える人材が少なく、その可能性についてまだ理解が進んでいない現状があります。そこで「Proof of X」の2回目となる本展では、Blockchain及びNFTのメディウムとしての特性に光を当て、NFTの「Core」とも言えるSmart Contractレイヤーを取り扱う作品を中心に、その諸相を紹介します。今日のCryptoカルチャーを形成するCoreとなっているSmart Contractの可能性はアートの領域のみに留まるものではありません。それを基盤として進化するデジタル文化の諸相を本展で提示するとともに、この展示がより良き議論の機会となることを望みます。",
     OutlineDateWeekend:
       "土日 : 10:00am - 07:00pm (初日はOpeningReceptionのため10:00pmまで)",
     OutlineDateWeekday: "平日 : 12:00pm - 09:00pm",
@@ -24,29 +18,23 @@ const i18n = {
       "「Proof of X Vol.2」はNFTの領域で活動する批評家、メディア、アーティスト、技術者による共同運営により開催されます。現在のチームは以下の通りです。",
   },
   en: {
-    concept1:
-      "Proof of X is an art exhibition that focuses on NFT and blockchain technology.",
-    concept2:
-      'This exhibition, which is scheduled for April 2022, is a sequel to the "Proof of X - NFT as New Media Art" exhibition, which aimed to capture NFT as a unique technology and medium. It showcases the works of domestic and international artists who focus on blockchain and smart contracts, which are the "core" of NFT. It has been a year since the last "Proof of X" exhibition, and the situation surrounding NFT art has changed significantly. After experiencing the so-called "crypto winter" crash, the speculative fever for NFT art has gradually cooled down, and the question of what NFT art is and what it can do is being reconsidered. This means that we need to re-examine the potential for blockchain, which has demonstrated that technology can be a manifestation of ideology, and the power (or precariousness) of "code execution" through smart contracts that are deployed there.',
-    concept3:
-      'There are works known as"Dynamic NFT" or "Programmable NFT" that can change the image and attributes of a work in response to external data or user actions by utilizing smart contracts. These works, which are created by artists, allow art to establish a variety of relationships starting from the blockchain. The potential of smart contracts, which are executed with transparency, is vast, and they have the potential to change the relationship between artists and audiences, collectors, and curators, which have been distinguished thus far, and eventually expand the field of art itself, and transform the creative activities that human beings have been engaged in. NFT has the potential to form a new social image beyond the field of art by being incorporated into a more complex digital ecosystem, rather than a simple digital asset.',
-    concept4:
-      "We hope that this exhibition will present various aspects of evolving digital culture and foster better discussions.",
+    concept:
+      "Now that digital art has become widely distributed through NFT, Generative Art has been re-evaluated and many artists with commercial success have also emerged. However, there are still few people who can critique or evaluate NFT, and there is still a lack of understanding about its potential. Therefore, in this exhibition, which is the second “Proof of X”, we will introduce NFT's various aspects, focusing on works dealing with the Smart Contract layer, which can be considered the \"Core\" of NFT, and shedding light on the properties of Blockchain and NFT as a medium. The potential of Smart Contract, the core of today's Crypto culture, is not limited to the realm of art. We hope that this exhibition will present various aspects of digital culture that are evolving based on this, and that it will be a better opportunity for discussion.",
     OutlineDateWeekend:
-      "Weekend : 10:00am - 07:00pm (OpeningReception on the first day until 10:00pm)",
+      "Weekend : 10:00am - 07:00pm (The opening reception will take place on the first day until 10:00pm)",
     OutlineDateWeekday: "Weekday : 12:00pm - 09:00pm",
     OutlineLocate: "ROOB-1 B2F, 28-13, Sarugaku-cho, Shibuya-ku, Tokyo",
     OutlineWay:
       "3-minute walk from Daikanyama Station on the Tokyu Toyoko Line",
     TicketAdult: "Adult : ¥1,000",
-    TicketCollege: "CollegeStudent : ¥500",
-    TicketHighschool: "Less than high school student : Free",
+    TicketCollege: "College Student : ¥500",
+    TicketHighschool: "Under 18 : Free",
     BuyTicket: "Buy Tickets",
     firststExhibit:
-      'The first edition of "Proof of X" was held at 3331 Arts Chiyoda in Tokyo from April 22 to May 1, 2022. Under the title "Proof of X NFT as New Media Art," the exhibition introduced works created in the course of gaining insight into NFT as a unique technology and medium, rather than using it as a mechanism for selling image data (for speculative purposes). Without taking a one-size-fits-all viewpoint (and sometimes taking a critical look at it), the artists looked at what NFT is and the characteristics that lie behind its surface, and presented works that incorporated various ideas.',
+      'From April 22 to May 1, 2022, the first edition of "Proof of X" was held at 3331 Arts Chiyoda in Tokyo. Titled "Proof of X NFT as New Media Art" the exhibition introduced works created through insights by looking at NFT as a unique technology and medium, rather than using it as a mechanism to sell image data as a speculative investment. The exhibition paid attention to underlying characteristics of NFT and presented works that incorporated various ideas sometimes critically and without a uniform perspective.',
     Team: "Proof of X Executive Committee",
     AboutTeam:
-      "Proof of X Vol. 2 is organized jointly by critics, media, artists, and technologists working in the realm of NFT. The current team is as follows",
+      "Proof of X Vol. 2 is organized by critics, media, artists, and technologists working in the realm of NFT. The current team is as follows",
   },
 };
 

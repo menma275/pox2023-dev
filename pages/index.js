@@ -52,6 +52,7 @@ export default function Home() {
       </Head>
 
       <Menu />
+      {/* <Main /> */}
       <MainVisual overflow="hidden" />
       <Container maxW="container.lg" px="3rem" position="relative">
         {/* Top Section */}
@@ -80,7 +81,6 @@ export default function Home() {
         </Box>
 
         {/* Concept Section */}
-        <Text></Text>
         <Box>
           <SectionTitle>CONCEPT</SectionTitle>
           <Box
@@ -89,10 +89,7 @@ export default function Home() {
             letterSpacing={["0.1rem", "0.1rem", "0.13rem", "0.13rem"]}
             fontFamily="Zen Kaku Gothic New"
           >
-            <Text>{t["concept1"]}</Text>
-            <Text>{t["concept2"]}</Text>
-            <Text>{t["concept3"]}</Text>
-            <Text>{t["concept4"]}</Text>
+            <Text>{t["concept"]}</Text>
           </Box>
         </Box>
         {/* Outline Section */}
@@ -193,16 +190,18 @@ export default function Home() {
         <Box>
           <SectionTitle>TICKET</SectionTitle>
           <Flex
+            marginX={{ base: "2.5rem", sm: "5rem" }}
             direction={{ base: "column", sm: "row" }}
             textAlign={{ base: "left", sm: "center" }}
             justifyContent="center"
-            spacing="2.5rem"
             fontSize={["1.25rem", "1.25rem", "1.5rem", "1.5rem"]}
             letterSpacing={["0.13rem", "0.13rem", "0.15rem", "0.15rem"]}
             fontFamily="Zen Kaku Gothic New"
           >
             <Text as="p">{t["TicketAdult"]}</Text>
+            <Spacer />
             <Text as="p">{t["TicketCollege"]}</Text>
+            <Spacer />
             <Text as="p">{t["TicketHighschool"]}</Text>
           </Flex>
           <Box width="fit-content" marginX="auto">

@@ -3,8 +3,6 @@ import { useEffect } from "react";
 import { Box } from "@chakra-ui/react";
 
 const MainVisual = (props) => {
-  // console.log(THREE);
-  // return <></>;
   let canvas;
   useEffect(() => {
     if (canvas) return;
